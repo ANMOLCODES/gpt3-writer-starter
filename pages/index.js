@@ -46,11 +46,15 @@ const callGenerateEndpoint = async () => {
           <div className="header-subtitle">
             <h2>Provide the role you're going for and mention a few qualities/qualifications of yours, we'll do the rest</h2>
           </div>
+          <p>A few pointers</p>
+          <li>Start out by mentioning the Job role and the company you're applying to. Eg. Developer Relations at Chainlink, which is a company in the Web3 space</li>
+          <li>If you are disatisfied by the result of the generator it is probably your fault. Be more descriptive you dickhead.</li>
+          <li>Mention a few qualities about yourself that you would like to be included in a separate paragraph. Eg. "include in the cover letter my previous experience as a DevRel at Filecoin and how it will help me handle the role and responsibilties better."</li>
         </div>
         <div className="prompt-container">
         <textarea
           className="prompt-box"
-          placeholder="start typing here"
+          placeholder="Developer Relations at Chainlink Labs, which is a web3 company dealing with decentralised oracles"
           value={userInput}
           onChange={onUserChangedText}
         />;
