@@ -6,7 +6,12 @@ const configuration = new Configuration({
 
 const openai = new OpenAIApi(configuration);
 
-const basePromptPrefix = "";
+const basePromptPrefix = 
+`
+Write me a cover letter for the job role and company mentioned below. Please make sure the cover letter sounds sincere and enthusiastic and shows that the writer did their research about the company.
+
+Job Role and company:
+`;
 const generateAction = async (req, res) => {
   // Run first prompt
   console.log(`API: ${basePromptPrefix}${req.body.userInput}`)
@@ -15,7 +20,7 @@ const generateAction = async (req, res) => {
     model: 'text-davinci-003',
     prompt: `${basePromptPrefix}${req.body.userInput}`,
     temperature: 0.7,
-    max_tokens: 250,
+    max_tokens: 400,
   });
   
   const basePromptOutput = baseCompletion.data.choices.pop();
