@@ -52,6 +52,19 @@ const callGenerateEndpoint = async () => {
           <li>Mention a few qualities about yourself that you would like to be included in a separate paragraph. Eg. "include in the cover letter my previous experience as a DevRel at Filecoin and how it will help me handle the role and responsibilties better."</li>
         </div>
         <div className="prompt-container">
+        <p >Enter Job Role and name of the company</p>
+        <textarea
+          className="prompt-box"
+          placeholder="Developer Relations at Chainlink Labs, which is a web3 company dealing with decentralised oracles"
+          value={userInput}
+          onChange={onUserChangedText}
+        />;
+        <textarea
+          className="prompt-box"
+          placeholder="Developer Relations at Chainlink Labs, which is a web3 company dealing with decentralised oracles"
+          value={userInput}
+          onChange={onUserChangedText}
+        />;
         <textarea
           className="prompt-box"
           placeholder="Developer Relations at Chainlink Labs, which is a web3 company dealing with decentralised oracles"
